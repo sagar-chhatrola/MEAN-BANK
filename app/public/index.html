@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="bankApp" ng-controller="loginController as loginCtrl">
+<head>
+<title>Net Banking a Banking Category Flat Bootstrap responsive Website Template | Home :: w3layouts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Net Banking Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+
+<!-- bootstrap-css -->
+<link href="assets/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link rel="stylesheet" type="text/css" href="assets/css/bootstrap-theme.min.css"/>
+<link rel="stylesheet" type="text/css" href="assets/css/registerForm.css"/>
+
+<!--// bootstrap-css -->
+<!-- css -->
+<link rel="stylesheet" href="assets/css/style.css" type="text/css" media="all" />
+<!--// css -->
+
+
+<!--//angular.js-->
+
+  <script  src="assets/js/angular.min.js"></script>
+	<script  src="assets/js/angular-route.min.js"></script>
+
+<script src="assets/js/bootstrap.js"></script>
+</head>
+<body>
+	<script src="app.js"></script>
+	<script  src="routes.js"></script>
+	<script  src="controllers/registerControllers.js"></script>
+	<script  src="controllers/loginControllers.js"></script>
+	<script  src="services/userService.js"></script>
+	<script  src="services/authService.js"></script>
+	
+	
+	<div class="banner">
+		<!--header-->
+		<div class="header">
+			<div class="container">		
+				<nav class="navbar navbar-default">
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+							<span class="sr-only">Toggle navigation</span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+							<span class="icon-bar"></span>
+						</button>
+						<h1><a  href="/">Net <span>Banking</span></a></h1>
+					</div>
+					<!--navbar-header-->
+					<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+						<ul class="nav navbar-nav navbar-right">
+							<li><a href="#" class="active">Home</a></li>
+							<li><a href="#!register" ng-hide="loginCtrl.loginUser" class="scroll">Register</a></li>
+							<li><a href="#!login" ng-hide="loginCtrl.loginUser" class="scroll">Login</a></li>
+							<li><a href="#!profile" ng-show="loginCtrl.loginUser" class="scroll">Profile</a></li>
+							<li><a href="#!logout" ng-show="loginCtrl.loginUser" ng-click="loginCtrl.logout()"class="scroll">Logout</a></li>
+						</ul>	
+						<div class="clearfix"> </div>	
+					</div>
+				</nav>
+			</div>
+		</div>
+		<!--//header-->
+	</div>
+	<ng-view></ng-view>
+	
+</body>	
+</html>

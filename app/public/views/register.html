@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Spectre sign up form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+     
+  
+</head>
+
+<body>
+ 
+  
+  <div class="container__child signup__form">
+    <form ng-submit="regCtrl.regUser(user)">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input class="form-control" type="text" name="username" ng-model="regCtrl.user.username" id="username" placeholder="james.bond" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input class="form-control" type="text" name="email" ng-model="regCtrl.user.email" id="email" placeholder="james.bond@spectre.com" required />
+      </div>
+       <div class="form-group">
+        <label for="mobile">Mobile</label>
+        <input class="form-control" type="text" name="mobile" ng-model="regCtrl.user.mobile" id="mobile" placeholder="1234567890" required />
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input class="form-control" type="password" name="password" ng-model="regCtrl.user.password" id="password" placeholder="********" required />
+      </div>
+      <div class="form-group">
+        <label for="passwordRepeat">Repeat Password</label>
+        <input class="form-control" type="password" name="passwordRepeat" id="passwordRepeat" placeholder="********" required />
+      </div>
+      <div class="m-t-lg">
+        <ul class="list-inline">
+          <li>
+            <input class="btn btn--form" type="submit" value="Register" />
+          </li>
+          <li>
+            <a class="signup__link" href="#">I am already a member</a>
+          </li>
+        </ul>
+      </div>
+    </form> 
+
+    <div class="row show-hide-message" ng-show="regCtrl.successMessage">
+      <div class="alert alert-success">{{regCtrl.successMessage}}</div>
+    </div>
+
+    <div class="row show-hide-message" ng-show="regCtrl.errorMessage">
+      <div class="alert alert-danger">{{regCtrl.errorMessage}}</div>
+    </div>
+
+  </div>
+
+  
+  
+</body>
+</html>

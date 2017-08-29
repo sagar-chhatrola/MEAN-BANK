@@ -1,0 +1,23 @@
+<h1>Welcome {{user1.username}}</h1><br/>
+
+<form ng-submit="profileUpdate(user1)">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input class="form-control" type="text" name="username" ng-model="user1.username" id="username" placeholder="james.bond" required />
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input class="form-control" type="text" name="email" ng-model="user1.email" id="email" placeholder="james.bond@spectre.com" required />
+      </div>
+       <div class="form-group">
+        <label for="mobile">Mobile</label>
+        <input class="form-control" type="text" name="mobile" ng-model="user1.mobile" id="mobile" placeholder="1234567890" required />
+      </div>
+      <div class="m-t-lg">
+        <ul class="list-inline">
+          <li>
+            <button class="btn btn-primary" type="submit">Update</button>
+          </li>
+        </ul>
+      </div>
+    </form> 

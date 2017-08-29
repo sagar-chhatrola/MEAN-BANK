@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Spectre sign up form</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ 
+     
+  
+</head>
+
+<body>
+  
+  
+  <div class="container__child signup__form">
+  <h1>Sign In</h1>
+    <form ng-submit="loginCtrl.dologin(user)">
+     
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input class="form-control" type="text" name="email" ng-model="loginCtrl.user.email"
+        id="email" placeholder="james.bond@spectre.com" required />
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input class="form-control" type="password" name="password" ng-model="loginCtrl.user.password" id="password" placeholder="********" required />
+      </div>
+      
+      <div class="m-t-lg">
+        <ul class="list-inline">
+          <li>
+            <input class="btn btn--form" type="submit" value="Sign In" />
+          </li>
+          <li>
+            <a class="signup__link" href="#">Not yet created?</a>
+          </li>
+        </ul>
+      </div>
+    </form> 
+     <div class="row show-hide-message" ng-show="loginCtrl.errorMessage">
+      <div class="alert alert-danger">{{loginCtrl.errorMessage}}</div>
+    </div> 
+  </div>
+
+  
+  
+</body>
+</html>
